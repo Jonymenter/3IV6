@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Esto es para que el titulo de la pestaña se mueva-->
+		<script src="https://kit.fontawesome.com/e00b108020.js"></script>
+		<script language="JavaScript">
+			var TituloFC = "3IV6      ";
+			var espera = 350;
+			var tiempobarrido = null;
+			function despliegue_title() {
+			document.title = TituloFC;
+			TituloFC = TituloFC.substring(1,TituloFC.length) + TituloFC.charAt(0);
+			tiempobarrido = setTimeout("despliegue_title()",espera);
+										}
+			despliegue_title();
+		</script>
+		<script>
+			function NewWindow(mypage, myname, w, h, scroll)
+			{
+			var winl = (screen.width - w) / 2;
+			var wint = (screen.height - h) / 2;
+			winprops = 'height='+h+',width='+w+',top='+wint+',left='+winl+',scrollbars='+scroll+',resizable'
+			win = window.open(mypage, myname, winprops)
+			if (parseInt(navigator.appVersion) >= 4) { win.window.focus(); }
+			}
+		</script>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="logo.png">
+	</head>
+	<script>
+		alert("Bienvenido usuario verifica que tu zoom sea de 100%");
+	</script>
+	<body>
+		<section id="bienvenida">
+			<div id="iceberg"></div>
+			<a id="siguiente" href="ingreso.html">
+				<font face="ROG Fonts">SIGUIENTE</font>
+			</a>
+			<div id="burbujas1" class="burbujas"></div>
+			<div id="burbujas2" class="burbujas"></div>
+			<div id="burbujas3" class="burbujas"></div>
+			<div id="burbujas4" class="burbujas"></div>
+			<div id="burbujas5" class="burbujas"></div>
+			<div id="burbujas6" class="burbujas"></div>
+			<div id="image1"></div>
+			<div id="image2"></div>
+			<br>
+			<p class="titulo" id="title"></p>
+		</section>
+	</body>
+</html>
+<style type="text/css">
+	body{
+			background: url(fondo1.png);
+			background-size: 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+			padding: 0vh;
+			animation-name: fondo;
+			animation-duration: 5s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate-reverse;
+			animation-timing-function: linear;
+		}
+		button:hover{
+			cursor: pointer;
+			opacity: .7;
+		}
+		@keyframes fondo{
+			0%{
+				background: url(fondo1.png);
+				background-size: 100%;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+			100%{
+				background: url(fondo2.png);
+				background-size: 100%;
+				background-repeat: no-repeat;
+			}
+		}
+		br{
+			width: .1vw;
+			height: .1vh;
+		}
+		#iceberg{
+			width: 85vw;
+			height: 60vh;
+			background: url(2.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			position: fixed;
+			margin-top: 42vh;
+			margin-left: 13vh;
+			animation-name: iceberg;
+			animation-duration: 5s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate-reverse;
+			animation-timing-function: linear;
+		}
+		@keyframes iceberg{
+			0%{
+				width: 85vw;
+				height: 60vh;
+				background: url(2.png);
+				background-repeat: no-repeat;
+				background-size: 100%;
+			}
+			100%{
+				width: 85vw;
+				height: 60vh;
+				background: url(1.png);
+				background-repeat: no-repeat;
+				background-size: 100%;
+			}
+		}
+		#image1{
+			width: 36vw;
+			height: 55vh;
+			background: url(a2.png);
+			background-repeat: no-repeat;
+			background-size: 100%;
+			margin-top: -2vh;
+			margin-left: -1vw;
+			padding: 0vh;
+			position: absolute;
+			animation-name: image1;
+			animation-duration: 5s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate-reverse;
+			animation-timing-function: linear;
+		}	
+		@keyframes image1{
+			0%{
+				width: 36vw;
+				height: 55vh;
+				background: url(a2.png);
+				background-repeat: no-repeat;
+				background-size: 100%;
+			}
+			100%{
+				width: 36vw;
+				height: 55vh;
+				background: url(a1.png);
+				background-repeat: no-repeat;
+				background-size: 100%;
+			}
+		}
+		#image2{
+			margin-top: -2vh;
+			margin-left: 68.5vw;
+			padding: 0vh;
+			width: 31vw;
+			height: 64vh;
+			background: url(b2.png);
+			background-size: 100%;
+			background-repeat: no-repeat;
+			position: absolute;
+			animation-name: image2;
+			animation-duration: 5s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate-reverse;
+			animation-timing-function: linear;
+		}		
+		@keyframes image2{
+			0%{
+				width: 31vw;
+				height: 64vh;
+				background: url(b2.png);
+				background-repeat: no-repeat;
+				background-size: 100%;
+			}
+			100%{
+				width: 31vw;
+				height: 64vh;
+				background: url(b1.png);
+				background-repeat: no-repeat;
+				background-size: 100%;
+			}
+		}
+		#siguiente{
+			font-size: 1.5vw;
+			color: #fff;
+			text-align: center;
+			position: fixed;
+			margin-top: 65vh;
+			margin-left: 45vw;
+			width: 12vw;
+			height: 6vh;
+			background-color: #000;
+			border-radius: 25%;
+			animation-name: sig;
+			animation-duration: 5s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate-reverse;
+			animation-timing-function: linear;
+		}
+		#siguiente:hover{
+			color: yellow;
+			cursor: pointer;
+		}
+		@keyframes sig{
+			0%{
+				background-color: #000;
+				text-align: center;
+				color: #fff;
+				border: 1vh;
+				border-color: #fff;
+				border-radius: 25%;
+			}
+			100%{
+				background-color: transparent;
+				color: transparent;
+				text-align: center;
+			}
+		}
+		.burbujas{
+			background-color: #4C53D2;
+			border-radius: 100%;
+			position: absolute;
+			bottom: 0;
+			animation: animarburbujas 4s linear infinite ;
+		}
+		.burbujas:nth-child(1){
+			width: 5vw;
+			height: 10vh;
+			left: 1vw;
+			animation-duration: 4s;
+			position: absolute;
+		}
+		.burbujas:nth-child(2){
+			width: 4vw;
+			height: 6vh;
+			left: 25vw;
+			animation-duration: 8s;
+		}
+		.burbujas:nth-child(3){
+			width: 9vw;
+			height: 13vh;
+			left: 40vw;
+			animation-duration: 5s;
+		}
+		.burbujas:nth-child(4){
+			width: 11vw;
+			height: 17vh;
+			left: 50vw;
+			animation-duration: 10s;
+		}
+		.burbujas:nth-child(5){
+			width: 10vw;
+			height: 16vh;
+			left: 65vh;
+			animation-duration: 6.5s;
+		}
+		.burbujas:nth-child(6){
+			width: 8vw;
+			height: 12vh;
+			left: 85vw;
+			animation-duration: 7s;
+		}
+		@keyframes animarburbujas{
+			0% {
+				width: 0;
+				height: 0;
+			}
+			3% {
+				width: 40px;
+				height: 37px;
+			}
+			50%{
+				margin-left: 20px;
+				opacity: 0.5;
+				background: #860B11;
+			}
+			100%{
+				transform: rotate(90deg);
+				bottom: 100vh;
+				background: #750A0F;
+			}
+		}
+		.titulo{
+			position: relative;
+			height: 30vh;
+			background: url(t3.png);
+			background-size: 40%;
+			background-position: center;
+			background-repeat: no-repeat;
+			padding-top: 10vh;
+			text-align: center;
+			font-family: Copperplate Gothic Bold;
+			color: #00AAC3;
+			animation: titulo 2s linear infinite alternate-reverse;
+			font-size: 20vh;
+			animation-duration: 5s;
+			animation-iteration-count: 1;
+			animation-play-state: running;
+			animation-direction: alternate-reverse;
+			animation-timing-function: linear;
+		}
+		@keyframes titulo{
+			0%{
+				height: 30vh;
+				background: url(t3.png);
+				background-size: 40%;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			70%{
+				height: 30vh;
+				background: url(t2.png);
+				background-size: 40%;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			100%{
+				height: 30vh;
+				background: url(t1.png);
+				background-size: 40%;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			to{
+				margin-top: 6vh;
+			}
+		}
+</style>
